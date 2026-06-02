@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
 });
 
-// Indicadores de testimonios (efecto visual simple)
+// Indicadores de testimonios
 function initTestimonialIndicators() {
     const dots = document.querySelectorAll('.testi-dot');
     const cards = document.querySelectorAll('.testi-card');
