@@ -257,7 +257,19 @@ function initTestimonialIndicators() {
 document.addEventListener('DOMContentLoaded', () => {
     initTestimonialIndicators();
 });
-
+// Abrir sitio web al hacer clic en el botón
+document.addEventListener('DOMContentLoaded', function() {
+    const botones = document.querySelectorAll('.grupo-btn');
+    
+    botones.forEach(boton => {
+        boton.addEventListener('click', function() {
+            const url = this.getAttribute('data-url');
+            if (url && url !== '#') {
+                window.open(url, '_blank');
+            }
+        });
+    });
+});
 // ============================================
 // CONFIGURACIÓN DE EMAILJS
 // ============================================
