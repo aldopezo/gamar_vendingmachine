@@ -1,0 +1,20 @@
+{
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/vending/",
+      "destination": "/gamatic/",
+      "permanent": true
+    },
+    {
+      "source": "/transporte/",
+      "destination": "/transporte-gamar/",
+      "permanent": true
+    },
+    {
+      "source": "/minimarket/",
+      "destination": "/minimarket-gamar/",
+      "permanent": true
+    }
+  ]
+}
