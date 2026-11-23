@@ -3,24 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>GAMATIC | Máquinas Inteligentes para Minería y Empresas</title>
+    <title>GAMATIC | Máquinas Expendedoras para Minería y Empresas · Grupo Gamar</title>
+    <meta name="description" content="GAMATIC, de Grupo Gamar: máquinas expendedoras (vending) de snacks, bebidas y café para minería, empresas, centros comerciales y grifos en Arequipa y el sur del Perú. Instalación, reposición y mantenimiento 24/7.">
+    <meta name="theme-color" content="#0a0c10">
+    <!-- Vista previa al compartir en WhatsApp / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_PE">
+    <meta property="og:site_name" content="GAMATIC · Grupo Gamar">
+    <meta property="og:title" content="GAMATIC | Máquinas expendedoras para minería y empresas">
+    <meta property="og:description" content="Snacks, bebidas y café 24/7 para su personal. Instalación, reposición y mantenimiento incluidos. Arequipa - Perú.">
+    <meta property="og:image" content="images/og-gamatic.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <!-- FAVICON - Logo personalizado -->
-    <link rel="shortcut icon" href="images/gamatic_logo.ico" type="image/x-icon">
+    <link rel="icon" href="images/gamatic_logo.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="images/gamatic_logo-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/gamatic_logo-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/gamatic_logo-180x180.png">
     <!-- Google Fonts + Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header id="header">
+    <div class="group-bar">
+        <div class="container group-bar-inner">
+            <span class="group-bar-label">Grupo Gamar</span>
+            <nav class="group-bar-links" aria-label="Empresas de Grupo Gamar">
+                <a href="https://transportesgamarperu.github.io/gamar_page/" target="_blank" rel="noopener"><i class="fas fa-truck"></i> Transportes</a>
+                <a href="#home" class="current" aria-current="page"><i class="fas fa-cash-register"></i> Vending</a>
+                <a href="https://minimarketgamar.netlify.app/" target="_blank" rel="noopener"><i class="fas fa-store"></i> Tiendas</a>
+            </nav>
+        </div>
+    </div>
     <div class="container">
         <div class="navbar">
             <div class="logo-container">
-                <img src="images/gamatic_logo.png" alt="GAMAR VENDING" class="logo-img">
+                <a href="#home"><img src="images/gamatic_logo.webp" alt="GAMATIC - Gamar Vending Machine" class="logo-img" width="134" height="52"></a>
             </div>
             <ul class="nav-links" id="navLinksDesktop">
                 <li><a href="#home">Inicio</a></li>
@@ -29,6 +51,7 @@
                 <li><a href="#maquinas">Máquinas</a></li>
                 <li><a href="#productos">Productos</a></li>
                 <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#grupo">Grupo Gamar</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
             <button class="hamburger-menu" id="hamburgerBtn" aria-label="Menú">
@@ -47,6 +70,7 @@
     <a href="#maquinas">Máquinas</a>
     <a href="#productos">Productos</a>
     <a href="#testimonios">Testimonios</a>
+    <a href="#grupo">Grupo Gamar</a>
     <a href="#contacto">Contacto</a>
 </div>
 
@@ -54,13 +78,16 @@
 <section id="home" class="hero">
     <div class="container">
         <div class="hero-content">
-            <div class="hero-badge"><i class="fas fa-microchip"></i> Máquinas Inteligentes · 24/7</div>
+            <div class="hero-badge"><i class="fas fa-microchip"></i> Una empresa de Grupo Gamar · 24/7</div>
             <h1>Soluciones Vending para Minería y Empresas</h1>
-            <p style="font-size: 1.1rem; margin-bottom: 32px; color: #CBD5E1;">+6 años transformando la experiencia automatizada. Máquinas robustas con monedero y pago en efectivo.</p>
-            <a href="#contacto" class="btn-primary"><i class="fas fa-rocket"></i> Cotizar Propuesta</a>
+            <p class="hero-lead">Instalamos, abastecemos y mantenemos máquinas expendedoras de snacks, bebidas y café en su empresa, mina, grifo o centro comercial. Usted pone el espacio, nosotros nos encargamos del resto.</p>
+            <div class="hero-actions">
+                <a href="#contacto" class="btn-primary"><i class="fas fa-file-signature"></i> Solicitar cotización</a>
+                <a href="https://wa.me/51948312313?text=Hola%20GAMATIC%2C%20quiero%20una%20m%C3%A1quina%20expendedora%20para%20mi%20empresa" class="btn-secondary" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Escribir por WhatsApp</a>
+            </div>
             <div class="hero-stats">
                 <div class="stat-card"><span class="stat-number" id="counterMachines">18+</span><br>Máquinas Activas</div>
-                <div class="stat-card"><span class="stat-number">100%</span><br>Satisfacción</div>
+                <div class="stat-card"><span class="stat-number">+6</span><br>Años de experiencia</div>
                 <div class="stat-card"><span class="stat-number">24/7</span><br>Soporte Técnico</div>
             </div>
         </div>
@@ -73,7 +100,7 @@
         <div class="about-container">
             <div class="about-image" data-aos="fade-right">
                 <div class="image-overlay">
-                    <img src="./images/fondo_nosotros.png" alt="GAMAR VENDING - Máquinas expendedoras">
+                    <img src="images/fondo_nosotros.webp" alt="Máquinas expendedoras GAMAR instaladas en un centro comercial" loading="lazy" width="900" height="650">
                 </div>
                 <div class="floating-badge">
                     <i class="fas fa-star"></i> +6 años de experiencia
@@ -141,7 +168,7 @@
         <div class="section-title">Flota de Máquinas Premium</div>
         <div class="section-sub">Equipos robustos para entornos exigentes (minería, oficinas, grifos)</div>
         <div class="machines-grid" id="machinesGrid"></div>
-        <p style="text-align:center; margin-top: 48px;"><i class="fas fa-check-circle" style="color:#E67E22;"></i> Métodos de pago: Monedas, billetes y tarjetas · Cambio automático</p>
+        <p class="machines-note"><i class="fas fa-check-circle"></i> Métodos de pago: monedas, billetes y tarjetas · Cambio automático</p>
     </div>
 </section>
 
@@ -264,36 +291,34 @@
             </div>
         </div>
 
-        <!-- NUEVA SECCIÓN: NUESTRO GRUPO EMPRESARIAL -->
-        <div class="grupo-empresarial">
-            <h3 class="grupo-titulo">Nuestro Grupo Empresarial</h3>
-            <div class="grupo-logos">
-                <!-- GAMAR -->
-                <div class="grupo-item">
-                    <div class="grupo-icon">
-                        <img src="images/logogamar.png" alt="TRANSPORTES" class="grupo-img">
-                    </div>
-                    <span>GAMAR TRANSPORTES</span>
-                    <button class="grupo-btn" data-url="https://transportesgamarperu.github.io/gamar_page/">
-                        <i class="fas fa-external-link-alt"></i> Visitar sitio
-                    </button>
-                </div>
-                
-                <!-- GAMAR TIENDAS -->
-                <div class="grupo-item">
-                    <div class="grupo-icon">
-                        <img src="images/tiendas_sinfondo.png" alt="GAMAR TIENDAS" class="grupo-img">
-                    </div>
-                    <span>GAMAR TIENDAS</span>
-                    <button class="grupo-btn" data-url="https://minimarketgamar.netlify.app/">
-                        <i class="fas fa-external-link-alt"></i> Visitar sitio
-                    </button>
-                </div>
-                
-            </div>
-            <div class="grupo-footer">
-                <p>Grupo empresarial comprometido con la excelencia y la innovación</p>
-            </div>
+    </div>
+</section>
+
+<!-- GRUPO GAMAR -->
+<section id="grupo" class="group-section">
+    <div class="container">
+        <div class="section-title">Somos Grupo Gamar</div>
+        <div class="section-sub">Tres empresas, un mismo compromiso con el sur del Perú</div>
+        <div class="group-grid">
+            <article class="group-card">
+                <div class="group-logo"><img src="images/logogamar.webp" alt="Logo Gamar Transportes" loading="lazy"></div>
+                <h3>Gamar Transportes</h3>
+                <p>Transporte de carga y servicios logísticos con unidades propias.</p>
+                <a class="group-link" href="https://transportesgamarperu.github.io/gamar_page/" target="_blank" rel="noopener">Visitar sitio <i class="fas fa-arrow-up-right-from-square"></i></a>
+            </article>
+            <article class="group-card is-current">
+                <span class="group-here">Estás aquí</span>
+                <div class="group-logo"><img src="images/gamatic_logo.webp" alt="Logo GAMATIC" loading="lazy"></div>
+                <h3>GAMATIC Vending</h3>
+                <p>Máquinas expendedoras de snacks, bebidas y café para empresas y minería.</p>
+                <a class="group-link" href="#maquinas">Ver máquinas <i class="fas fa-arrow-down"></i></a>
+            </article>
+            <article class="group-card">
+                <div class="group-logo"><img src="images/tiendas_sinfondo.webp" alt="Logo Gamar Tiendas" loading="lazy"></div>
+                <h3>Gamar Tiendas</h3>
+                <p>Minimarkets con productos de primera necesidad cerca de usted.</p>
+                <a class="group-link" href="https://minimarketgamar.netlify.app/" target="_blank" rel="noopener">Visitar sitio <i class="fas fa-arrow-up-right-from-square"></i></a>
+            </article>
         </div>
     </div>
 </section>
@@ -303,20 +328,24 @@
     <div class="container">
         <div class="contact-container">
             <div class="contact-info">
-                <h2 style="font-size:2rem; margin-bottom:20px;"><i class="fas fa-headset"></i> ¿Listo para automatizar?</h2>
-                <p style="margin-bottom:28px;">Reciba propuesta personalizada en menos de 24h.</p>
-                <div style="margin-bottom:12px;"><i class="fas fa-phone-alt" style="color:#E67E22;"></i> +51 948312313</div>
-                <div style="margin-bottom:12px;"><i class="fas fa-envelope" style="color:#E67E22;"></i> gamar.vendingmachine@gmail.com</div>
-                <div><i class="fas fa-user-tie"></i> ALDO PEZO - Administrador</div>
+                <h2 class="contact-title"><i class="fas fa-headset"></i> ¿Listo para tener una máquina en su empresa?</h2>
+                <p class="contact-lead">Reciba una propuesta personalizada en menos de 24 horas. La instalación y el mantenimiento corren por nuestra cuenta.</p>
+                <ul class="contact-list">
+                    <li><a href="https://wa.me/51948312313?text=Hola%20GAMATIC%2C%20necesito%20informaci%C3%B3n" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp: +51 948 312 313</a></li>
+                    <li><a href="tel:+51948312313"><i class="fas fa-phone-alt"></i> Llamar: +51 948 312 313</a></li>
+                    <li><a href="mailto:gamar.vendingmachine@gmail.com"><i class="fas fa-envelope"></i> gamar.vendingmachine@gmail.com</a></li>
+                    <li><i class="fas fa-user-tie"></i> Aldo Pezo · Administrador</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Arequipa - Perú</li>
+                </ul>
             </div>
             <div class="contact-form">
                 <form id="contactForm">
-                    <input type="text" placeholder="Nombre completo" id="nombreContacto" required>
-                    <input type="email" placeholder="Correo electrónico" id="emailContacto" required>
-                    <input type="tel" placeholder="Teléfono / WhatsApp" id="telefonoContacto">
-                    <textarea rows="3" placeholder="Detalle su requerimiento..." id="mensajeContacto"></textarea>
-                    <button type="submit" class="btn-primary" style="width:100%; justify-content:center;"><i class="fas fa-paper-plane"></i> Enviar solicitud</button>
-                    <p id="formMessage" style="margin-top:16px;"></p>
+                    <input type="text" placeholder="Nombre completo" id="nombreContacto" aria-label="Nombre completo" autocomplete="name" required>
+                    <input type="email" placeholder="Correo electrónico" id="emailContacto" aria-label="Correo electrónico" autocomplete="email" required>
+                    <input type="tel" placeholder="Teléfono / WhatsApp" id="telefonoContacto" aria-label="Teléfono o WhatsApp" autocomplete="tel">
+                    <textarea rows="3" placeholder="Empresa, ciudad y qué necesita (snacks, bebidas, café...)" id="mensajeContacto" aria-label="Detalle de su requerimiento"></textarea>
+                    <button type="submit" class="btn-primary btn-block"><i class="fas fa-paper-plane"></i> Enviar solicitud</button>
+                    <p id="formMessage" role="status" aria-live="polite"></p>
                 </form>
             </div>
         </div>
@@ -328,21 +357,21 @@
     <div class="container">
         <div class="footer-grid">
             <div class="footer-col">
-                <div style="font-size:1.6rem; font-weight:700; margin-bottom:20px;">GAMA<span style="color:#E67E22">TIC</span></div>
-                <p>Máquinas inteligentes, compras fáciles. Más de 6 años de experiencia en ventas automatizadas.</p>
-                <div class="social-icons"><a href="https://www.facebook.com/profile.php?id=61575525922110" target="_blank"><i class="fab fa-facebook-f"></i></a></div>
+                <div class="footer-brand">GAMA<span>TIC</span></div>
+                <p>Máquinas inteligentes, compras fáciles. Más de 6 años de experiencia en ventas automatizadas. Una empresa de Grupo Gamar.</p>
+                <div class="social-icons"><a href="https://www.facebook.com/profile.php?id=61575525922110" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="https://wa.me/51948312313" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></div>
             </div>
-            <div class="footer-col"><h4>Navegación</h4><ul class="footer-links"><li><a href="#home">Inicio</a></li><li><a href="#nosotros">Nosotros</a></li><li><a href="#servicios">Servicios</a></li><li><a href="#maquinas">Máquinas</a></li><li><a href="#contacto">Contacto</a></li></ul></div>
-            <div class="footer-col"><h4>Máquinas</h4><ul class="footer-links"><li><a href="#maquinas">Modelo 10C · Snack/Bebidas</a></li><li><a href="#maquinas">Modelo D720 · Café + Snacks</a></li><li><a href="#maquinas">Modelo 9G · Ascensor</a></li><li><a href="#maquinas">Modelo 4N · Café Molido</a></li></ul></div>
-            <div class="footer-col"><h4>Contacto</h4><ul class="footer-links"><li><i class="fas fa-phone-alt" style="color:#E67E22; margin-right:8px;"></i> +51 948312313</li><li><i class="fas fa-envelope" style="color:#E67E22; margin-right:8px;"></i> gamar.vendingmachine@gmail.com</li><li><i class="fas fa-map-marker-alt" style="color:#E67E22; margin-right:8px;"></i> Arequipa - Perú</li></ul></div>
+            <div class="footer-col"><h4>Grupo Gamar</h4><ul class="footer-links"><li><a href="https://transportesgamarperu.github.io/gamar_page/" target="_blank" rel="noopener">Gamar Transportes</a></li><li><a href="#home">GAMATIC Vending</a></li><li><a href="https://minimarketgamar.netlify.app/" target="_blank" rel="noopener">Gamar Tiendas</a></li></ul></div>
+            <div class="footer-col"><h4>Máquinas</h4><ul class="footer-links"><li><a href="#maquinas">Modelo 10C · Snack/Bebidas</a></li><li><a href="#maquinas">Modelo D720 · Café + Snacks</a></li><li><a href="#maquinas">Modelo 9G · Ascensor</a></li><li><a href="#maquinas">Modelo 4N · Café Molido</a></li><li><a href="#maquinas">Modelo 2N · Montaje Pared</a></li></ul></div>
+            <div class="footer-col"><h4>Contacto</h4><ul class="footer-links"><li><i class="fas fa-phone-alt"></i> <a href="tel:+51948312313">+51 948 312 313</a></li><li><i class="fas fa-envelope"></i> <a href="mailto:gamar.vendingmachine@gmail.com">gamar.vendingmachine@gmail.com</a></li><li><i class="fas fa-map-marker-alt"></i> Arequipa - Perú</li></ul></div>
         </div>
-        <div class="footer-bottom" style="text-align:center; margin-top:40px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.05);"><p>&copy; 2026 GAMAR VENDING MACHINE | Todos los derechos reservados</p></div>
+        <div class="footer-bottom"><p>&copy; <span id="year">2026</span> GAMATIC · Gamar Vending Machine · Grupo Gamar | Todos los derechos reservados</p></div>
     </div>
 </footer>
 
-<a href="https://wa.me/51948312313?text=Hola%20GAMAR%20VENDING%2C%20necesito%20informaci%C3%B3n" class="floating-wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<a href="https://wa.me/51948312313?text=Hola%20GAMAR%20VENDING%2C%20necesito%20informaci%C3%B3n" class="floating-wa" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
 
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>

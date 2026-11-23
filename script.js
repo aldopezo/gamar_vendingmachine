@@ -3,7 +3,7 @@ const machinesData = [
   {
     name: "Modelo 10C",
     badge: "Snacks y Bebidas",
-    img: "./images/modelo_10c.jpeg",
+    img: "images/modelo_10c.webp",
     capacidad: "360-800 und",
     dimensiones: "1985x1160x870mm",
     peso: "330kg",
@@ -14,7 +14,7 @@ const machinesData = [
   {
     name: "Modelo D720",
     badge: "Café y Snacks",
-    img: "./images/modelo_d720.png",
+    img: "images/modelo_d720.webp",
     capacidad: "360-800 und + 300 vasos",
     dimensiones: "1985x1160x870mm",
     peso: "390kg",
@@ -25,7 +25,7 @@ const machinesData = [
   {
     name: "Modelo 9G",
     badge: "Ascensor",
-    img: "./images/modelo_9g.png",
+    img: "images/modelo_9g.webp",
     capacidad: "240-540 und",
     dimensiones: "1940x1040x790mm",
     peso: "280kg",
@@ -36,7 +36,7 @@ const machinesData = [
   {
     name: "Modelo 4N",
     badge: "Café Molido",
-    img: "./images/modelo_4n.png",
+    img: "images/modelo_4n.webp",
     capacidad: "Tolva 1.2kg / 300 vasos",
     dimensiones: "810x500x450mm",
     peso: "90kg",
@@ -47,7 +47,7 @@ const machinesData = [
   {
     name: "Modelo 2N",
     badge: "Montaje Pared",
-    img: "./images/modelo_2n.png",
+    img: "images/modelo_2n.webp",
     capacidad: "165 piezas",
     dimensiones: "1000x700x700mm",
     peso: "117kg",
@@ -62,11 +62,11 @@ if (grid) {
     .map(
       (m) => `
             <div class="machine-card">
-                <div class="machine-badge" style="margin:16px 16px 0 16px; display:inline-block;">${m.badge}</div>
-                <img class="machine-img" src="${m.img}" alt="${m.name}" onerror="this.src='https://placehold.co/400x300?text=Imagen+no+disponible'">
+                <div class="machine-badge">${m.badge}</div>
+                <img class="machine-img" src="${m.img}" alt="Máquina expendedora ${m.name} - ${m.badge}" loading="lazy" width="320" height="220">
                 <div class="machine-info">
-                    <h3 style="font-size:1.5rem;">${m.name}</h3>
-                    <div style="margin:12px 0;"><span class="spec-tag"><i class="fas fa-box"></i> ${m.capacidad.split(" ")[0]}+</span><span class="spec-tag"><i class="fas fa-thermometer-half"></i> ${m.temp.includes("°C") ? "Refrigerada" : "Ambiente"}</span></div>
+                    <h3 class="machine-name">${m.name}</h3>
+                    <div class="machine-tags"><span class="spec-tag"><i class="fas fa-box"></i> ${m.capacidad.split(" ")[0]}</span><span class="spec-tag"><i class="fas fa-thermometer-half"></i> ${m.temp.includes("90") ? "Bebida caliente" : m.temp.includes("°C") ? "Refrigerada" : "Ambiente"}</span></div>
                     <ul class="spec-list">
                         <li><i class="fas fa-box"></i> Capacidad: ${m.capacidad}</li>
                         <li><i class="fas fa-ruler-combined"></i> ${m.dimensiones}</li>
@@ -75,6 +75,7 @@ if (grid) {
                         <li><i class="fas fa-money-bill-wave"></i> ${m.pago}</li>
                         <li><i class="fas fa-microchip"></i> ${m.extras}</li>
                     </ul>
+                    <a class="machine-cta" href="https://wa.me/51948312313?text=${encodeURIComponent("Hola GAMATIC, me interesa el " + m.name + " (" + m.badge + "). ¿Me pueden enviar una cotización?")}" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Cotizar este modelo</a>
                 </div>
             </div>
         `,
@@ -278,8 +279,26 @@ const EMAILJS_PUBLIC_KEY = "8P-3gvjskqvoz78Al";
 const EMAILJS_SERVICE_ID = "service_j3x45se";      
 const EMAILJS_TEMPLATE_ID = "template_okf1e9r";    
 
-// Inicializar EmailJS
-emailjs.init(EMAILJS_PUBLIC_KEY);
+// Inicializar EmailJS (si el navegador bloquea el script, el formulario
+// ofrece enviar la solicitud por WhatsApp en lugar de perderla)
+let emailjsListo = false;
+try {
+    if (window.emailjs) {
+        emailjs.init(EMAILJS_PUBLIC_KEY);
+        emailjsListo = true;
+    }
+} catch (e) {
+    console.error("EmailJS no disponible:", e);
+}
+
+const WHATSAPP_NUMERO = "51948312313";
+function enlaceWhatsApp(datos) {
+    const texto = `Hola GAMATIC, quiero una cotización.\nNombre: ${datos.nombre}\nCorreo: ${datos.email}\nTeléfono: ${datos.telefono || "-"}\nDetalle: ${datos.mensaje || "-"}`;
+    return `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(texto)}`;
+}
+
+const yearEl = document.getElementById("year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // ============================================
 // FUNCIÓN PARA ENVIAR CORREO
@@ -297,6 +316,9 @@ async function enviarCotizacion(datos) {
         })
     };
 
+    if (!emailjsListo) {
+        return { success: false, error: "EmailJS no cargó" };
+    }
     try {
         const response = await emailjs.send(
             EMAILJS_SERVICE_ID,
@@ -366,13 +388,15 @@ if (formulario) {
             mostrarMensaje("✅ ¡Solicitud enviada con éxito! El administrador se contactará contigo en menos de 24 horas.", "success");
             formulario.reset();
         } else {
-            mostrarMensaje("❌ Hubo un error al enviar tu solicitud. Por favor, escríbenos directamente a: gamar.vendingmachine@gmail.com", "error");
+            const wa = enlaceWhatsApp({ nombre, email, telefono, mensaje });
+            mostrarMensaje(`❌ No pudimos enviar el formulario. <a href="${wa}" target="_blank" rel="noopener">Envíe su solicitud por WhatsApp aquí</a> o escríbanos a gamar.vendingmachine@gmail.com`, "error");
+            return; // el mensaje de error se queda visible para que pueda usar el enlace
         }
 
-        // Limpiar mensaje después de 5 segundos
+        // Limpiar mensaje después de 8 segundos
         setTimeout(() => {
             if (mensajeDiv) mensajeDiv.innerHTML = "";
-        }, 5000);
+        }, 8000);
     });
 }
 
