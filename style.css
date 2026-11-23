@@ -13,7 +13,7 @@ body {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 90px;
+  scroll-padding-top: 120px;
 }
 
 ::-webkit-scrollbar {
@@ -223,6 +223,7 @@ header {
   background-attachment: fixed;
   display: flex;
   align-items: center;
+  padding: 140px 0 80px;
 }
 .hero-content {
   max-width: 720px;
@@ -1379,5 +1380,430 @@ textarea {
   }
   .section-title {
     font-size: 1.7rem;
+  }
+}
+
+
+/* =====================================================
+   MEJORAS DE DISEÑO (Grupo Gamar) - nov 2026
+   ===================================================== */
+
+/* Barra superior del Grupo Gamar */
+.group-bar {
+  background: #05080c;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.78rem;
+}
+.group-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 34px;
+}
+.group-bar-label {
+  color: #94a3b8;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+.group-bar-links {
+  display: flex;
+  gap: 6px;
+}
+.group-bar-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: 5px 12px;
+  border-radius: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+.group-bar-links a:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+}
+.group-bar-links a.current {
+  background: rgba(230, 126, 34, 0.18);
+  color: #f39c12;
+}
+.navbar {
+  padding: 10px 0;
+}
+.logo-img {
+  height: 48px;
+}
+
+/* Hero */
+.hero-lead {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  color: #cbd5e1;
+  max-width: 620px;
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 60px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.04);
+  transition: all 0.3s ease;
+}
+.btn-secondary:hover {
+  border-color: #25d366;
+  background: rgba(37, 211, 102, 0.12);
+  transform: translateY(-3px);
+}
+.btn-secondary .fa-whatsapp {
+  color: #25d366;
+  font-size: 1.2rem;
+}
+.btn-block {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Tarjetas de compromiso: 3 columnas parejas, sin tarjeta huérfana */
+.commitment-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.commitment-card {
+  padding: 24px 16px;
+}
+
+/* Iconos de servicios visibles y ordenados */
+.service-card h3 {
+  margin-bottom: 8px;
+}
+.service-card p {
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+/* Máquinas */
+.machine-card {
+  display: flex;
+  flex-direction: column;
+}
+.machine-badge {
+  margin: 16px 16px 0;
+  align-self: flex-start;
+}
+.machine-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.machine-name {
+  font-size: 1.5rem;
+}
+.machine-tags {
+  margin: 12px 0;
+}
+.spec-list {
+  flex: 1;
+}
+.machine-cta {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 60px;
+  background: rgba(37, 211, 102, 0.12);
+  border: 1px solid rgba(37, 211, 102, 0.4);
+  color: #e7fbe9;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.machine-cta i {
+  color: #25d366;
+  font-size: 1.15rem;
+}
+.machine-cta:hover {
+  background: #25d366;
+  color: #04220f;
+}
+.machine-cta:hover i {
+  color: #04220f;
+}
+.machines-note {
+  text-align: center;
+  margin-top: 48px;
+  color: #cbd5e1;
+}
+.machines-note i {
+  color: #e67e22;
+}
+
+/* Sección Grupo Gamar */
+.group-section {
+  background: linear-gradient(180deg, #0a0c10 0%, #0f172a 100%);
+}
+.group-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.group-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  padding: 36px 28px 28px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.group-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(230, 126, 34, 0.6);
+}
+.group-card.is-current {
+  border-color: #e67e22;
+  background: rgba(230, 126, 34, 0.07);
+}
+.group-here {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #e67e22;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.group-logo {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.group-logo img {
+  max-height: 80px;
+  max-width: 200px;
+  object-fit: contain;
+}
+.group-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+.group-card p {
+  color: #94a3b8;
+  line-height: 1.55;
+  flex: 1;
+  margin-bottom: 22px;
+}
+.group-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #f39c12;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border-radius: 40px;
+  border: 1px solid rgba(230, 126, 34, 0.35);
+  transition: 0.2s;
+}
+.group-link:hover {
+  background: #e67e22;
+  color: #fff;
+}
+
+/* Contacto */
+.contact-title {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+.contact-lead {
+  margin-bottom: 24px;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.contact-list li,
+.contact-list a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #e2e8f0;
+  text-decoration: none;
+}
+.contact-list a:hover {
+  color: #f39c12;
+}
+.contact-list i {
+  width: 20px;
+  text-align: center;
+  color: #e67e22;
+}
+.contact-list .fa-whatsapp {
+  color: #25d366;
+  font-size: 1.15rem;
+}
+#formMessage {
+  margin-top: 16px;
+}
+#formMessage a {
+  color: #25d366;
+  font-weight: 600;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #e67e22;
+  box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.2);
+}
+
+/* Footer */
+.footer-brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.footer-brand span {
+  color: #e67e22;
+}
+.footer-col p {
+  color: #94a3b8;
+  line-height: 1.6;
+}
+.footer-col .footer-links li i {
+  color: #e67e22;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+/* Responsive de las mejoras */
+@media (max-width: 1024px) {
+  .commitment-grid {
+    grid-template-columns: 1fr;
+  }
+  .group-grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    /* "fixed" no funciona bien en celulares y hace lenta la página */
+    background-attachment: scroll;
+    min-height: auto;
+    padding: 150px 0 60px;
+  }
+  .group-bar-label {
+    display: none;
+  }
+  .group-bar-inner {
+    justify-content: center;
+  }
+  .contact-title {
+    font-size: 1.6rem;
+  }
+  section {
+    padding: 70px 0;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+  .group-bar-links a {
+    padding: 5px 9px;
+  }
+  .hero-actions a {
+    width: 100%;
+    justify-content: center;
+  }
+  .btn-secondary {
+    padding: 10px 22px;
+    font-size: 0.85rem;
+  }
+  .machines-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+  [data-aos] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Logos del grupo sobre fondo claro para que se lean todos (algunos tienen texto oscuro) */
+.group-logo {
+  background: #f8fafc;
+  border-radius: 20px;
+  padding: 10px 22px;
+  min-width: 200px;
+}
+.group-logo img {
+  max-height: 70px;
+}
+.group-card.is-current .group-logo {
+  background: #0a0c10;
+}
+
+@media (max-width: 480px) {
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 32px;
+  }
+  .stat-card {
+    padding: 12px 8px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 0.75rem;
+  }
+  .stat-number {
+    font-size: 1.5rem;
   }
 }
