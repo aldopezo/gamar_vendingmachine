@@ -1,0 +1,9 @@
+{
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/minimarket-gamar/", "destination": "https://minimarketgamar.netlify.app/", "permanent": false },
+    { "source": "/vending/", "destination": "/gamatic/", "permanent": true },
+    { "source": "/transporte/", "destination": "/transporte-gamar/", "permanent": true },
+    { "source": "/minimarket/", "destination": "/minimarket-gamar/", "permanent": true }
+  ]
+}
