@@ -60,7 +60,7 @@ window.addEventListener("click", (e) => {
 });
 
 // 6. Inicializar EmailJS
-emailjs.init("80SoIT9Dh6phkwTZt");
+if (window.emailjs) emailjs.init("80SoIT9Dh6phkwTZt");
 
 // 7. Envío del formulario
 document.getElementById("quote-form").addEventListener("submit", (e) => {

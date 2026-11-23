@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Mini Market Gamar | Distribuidora Mayorista y Minorista</title>
+
+    <!-- FAVICON - Logo personalizado -->
+    <link
+      rel="shortcut icon"
+      href="images/tiendas_gamar.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/tiendas_gamar-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/tiendas_gamar-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/tiendas_gamar-180x180.png"
+    />
+
+    <!-- Font Awesome 6 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google Fonts: Montserrat + Open Sans -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <div class="navbar">
+      <div class="logo-container">
+        <img src="images/tiendas_sinfondo.webp" alt="GAMAR" class="logo-img" />
+      </div>
+      <div class="mobile-menu" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#clientes">Clientes</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- Hero / Inicio -->
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <span class="hero-badge"
+          ><i class="fas fa-store"></i> Mayorista y Menorista</span
+        >
+        <h1>
+          Más de 14 años <br />
+          abasteciendo calidad
+        </h1>
+        <p>
+          Productos de primera necesidad, snacks, útiles de limpieza, embutidos,
+          golosinas y mucho más. Atención personalizada y entregas a empresas e
+          instituciones.
+        </p>
+        <a href="#contacto" class="btn-primary"
+          ><i class="fas fa-shopping-cart"></i> Cotiza ahora</a
+        >
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3>2007</h3>
+            <p>Fundación</p>
+          </div>
+          <div class="stat-item">
+            <h3>3</h3>
+            <p>Sucursales</p>
+          </div>
+          <div class="stat-item">
+            <h3>+30</h3>
+            <p>Proveedores</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="quality-badge">
+          <i class="fas fa-certificate"></i>
+          <span>Calidad Garantizada</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiénes Somos + Misión, Visión, Valores -->
+    <section id="nosotros" class="section">
+      <div class="nosotros-container">
+        <div class="nosotros-header">
+          <h2 class="section-title">
+            ¿Quiénes <span class="text-orange">somos?</span>
+          </h2>
+          <p class="nosotros-intro">
+            Somos una empresa peruana comprometida con abastecer productos de
+            primera calidad para tu negocio y hogar.
+          </p>
+        </div>
+
+        <div class="nosotros-grid">
+          <!-- Historia -->
+          <div class="historia-card">
+            <div class="card-icon">
+              <i class="fas fa-store"></i>
+            </div>
+            <h3>Nuestra Historia</h3>
+            <p>
+              <strong>Mini Market Gamar E.I.R.L</strong> forma parte del grupo
+              GAMAR, fundada en <strong>Espinar - Cusco (2007)</strong> y
+              expandida a <strong>Arequipa en 2020</strong>. Con más de una
+              década de experiencia, nos especializamos en la venta de productos
+              de primera necesidad, ofreciendo calidad, honestidad y servicio
+              excepcional a empresas y familias.
+            </p>
+            <p class="mt-2">
+              Importamos productos exclusivos, trabajamos con proveedores
+              internacionales y tenemos alianzas estratégicas para garantizar la
+              mejor calidad en cada entrega.
+            </p>
+          </div>
+
+          <!-- Tarjetas de Misión y Visión -->
+          <div class="mision-vision-grid">
+            <div class="mision-card">
+              <div class="card-icon">
+                <i class="fas fa-bullseye"></i>
+              </div>
+              <h3>Misión</h3>
+              <p>
+                Proveer productos de alta calidad con un servicio de excelencia,
+                atención excepcional y satisfacer proactivamente las necesidades
+                de nuestros clientes, superando sus expectativas.
+              </p>
+            </div>
+            <div class="vision-card">
+              <div class="card-icon">
+                <i class="fas fa-eye"></i>
+              </div>
+              <h3>Visión</h3>
+              <p>
+                Ser la mejor opción de abastecimiento en el Sur del país,
+                ofreciendo gran variedad de productos a los mejores precios, con
+                un servicio que nos distinga por calidez y confianza.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Valores + Política de Calidad integrados -->
+        <div class="valores-politica">
+          <div class="valores-section">
+            <h3>
+              <i class="fas fa-heart" style="color: var(--primary-orange)"></i>
+              Nuestros Valores
+            </h3>
+            <div class="valores-grid">
+              <div class="valor-item">
+                <div class="valor-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div>
+                  <h4>Responsabilidad</h4>
+                  <p>
+                    Actuamos con compromiso ante clientes, proveedores,
+                    colaboradores y comunidad.
+                  </p>
+                </div>
+              </div>
+              <div class="valor-item">
+                <div class="valor-icon"><i class="fas fa-star"></i></div>
+                <div>
+                  <h4>Calidad</h4>
+                  <p>
+                    Cumplimos los más altos parámetros y promesas de calidad en
+                    cada producto.
+                  </p>
+                </div>
+              </div>
+              <div class="valor-item">
+                <div class="valor-icon"><i class="fas fa-user-check"></i></div>
+                <div>
+                  <h4>Enfoque al Cliente</h4>
+                  <p>
+                    Conocemos y satisfacemos las necesidades de quienes confían
+                    en nosotros.
+                  </p>
+                </div>
+              </div>
+              <div class="valor-item">
+                <div class="valor-icon">
+                  <i class="fas fa-hand-sparkles"></i>
+                </div>
+                <div>
+                  <h4>Honradez</h4>
+                  <p>
+                    Actuamos con rectitud, transparencia y justicia ante todos
+                    nuestros aliados.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="politica-section">
+            <div class="politica-icon">
+              <i class="fas fa-file-signature"></i>
+            </div>
+            <div class="politica-content">
+              <h3>Política de Calidad</h3>
+              <p>
+                Satisfacer las necesidades del cliente cumpliendo estándares y
+                compromisos acordados, generando confianza. Promovemos mejora
+                continua, un ambiente de trabajo sano y seguro, y la
+                participación activa de los trabajadores en la toma de
+                decisiones. Revisamos periódicamente los objetivos de calidad
+                bajo un enfoque de procesos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios Destacados -->
+    <section id="servicios" class="section">
+      <h2 class="section-title">Servicios Especializados</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fas fa-headset"></i>
+          <h3>Atención personalizada</h3>
+          <p>
+            Personal capacitado en puntos de venta, amplia gama de productos.
+          </p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-chart-line"></i>
+          <h3>Cotizaciones a empresas</h3>
+          <p>
+            Línea de productos para empresas privadas y entidades del estado.
+          </p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-basket-shopping"></i>
+          <h3>Canastas personalizadas</h3>
+          <p>
+            Armado de canastas predefinidas o a pedido sin costo adicional por
+            ensamblaje.
+          </p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-ticket-alt"></i>
+          <h3>Vales de consumo</h3>
+          <p>
+            Válidos en todos nuestros puntos de venta, sin cargos adicionales.
+          </p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-coffee"></i>
+          <h3>Refrigerios empresariales</h3>
+          <p>
+            Empleados obtienen productos por valor estipulado todos los días.
+          </p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-truck"></i>
+          <h3>Transporte propio</h3>
+          <p>
+            Furgón para traslado de productos a puntos específicos según
+            requerimiento.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nuestros Clientes y Proveedores -->
+    <section id="clientes" class="client-section">
+      <h2 class="section-title">Confían en Nosotros</h2>
+      <p style="margin-bottom: 1.5rem">
+        Año tras año mejoramos nuestros servicios, estableciendo relaciones
+        duraderas con empresas líderes.
+      </p>
+
+      <div class="client-carousel-container">
+        <div class="client-carousel">
+          <div class="client-carousel-track" id="clientTrack"></div>
+        </div>
+      </div>
+
+      <div class="proveedores-text">
+        <i class="fas fa-handshake"></i>
+        <h3>Nuestros Proveedores</h3>
+        <p>
+          Trabajamos con una amplia cartera de proveedores nacionales e
+          internacionales, cuidadosamente seleccionados y evaluados por la
+          calidad de sus productos, garantizando siempre lo mejor para nuestros
+          clientes.
+        </p>
+      </div>
+
+      <!-- HTML del bloque Grupo Empresarial-->
+      <div class="grupo-empresarial">
+        <h3 class="grupo-titulo">Nuestro Grupo Empresarial</h3>
+
+        <div class="grupo-logos">
+          <!-- GAMATIC -->
+          <div class="grupo-item">
+            <div class="grupo-icon">
+              <img
+                src="images/gamatic_logo.webp"
+                alt="GAMATIC"
+                class="grupo-img"
+              />
+            </div>
+            <span>GAMATIC MÁQUINAS INTELIGENTES</span>
+            <button
+              class="grupo-btn"
+              data-url="/gamatic/"
+            >
+              <i class="fas fa-external-link-alt"></i> Visitar sitio
+            </button>
+          </div>
+
+          <!-- GAMAR TIENDAS -->
+          <div class="grupo-item">
+            <div class="grupo-icon">
+              <img
+                src="images/logogamar.webp"
+                alt="GAMAR TIENDAS"
+                class="grupo-img"
+              />
+            </div>
+            <span>GAMAR TRANSPORTES</span>
+            <button
+              class="grupo-btn"
+              data-url="/transporte-gamar/"
+            >
+              <i class="fas fa-external-link-alt"></i> Visitar sitio
+            </button>
+          </div>
+        </div>
+
+        <div class="grupo-footer">
+          <p>
+            Grupo empresarial comprometido con la excelencia y la innovación
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto y ubicaciones -->
+    <section id="contacto" class="section">
+      <div class="contact-header">
+        <h2 class="section-title">Contacto & <span>Sucursales</span></h2>
+        <p class="contact-subtitle">
+          Estamos ubicados estratégicamente para servirte mejor
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Tarjeta de Sucursales -->
+        <div class="contact-card">
+          <div class="card-header">
+            <i class="fas fa-store"></i>
+            <h3>Nuestras Sucursales</h3>
+          </div>
+          <div class="sucursales-list">
+            <div class="sucursal-item">
+              <div class="sucursal-icon">
+                <i class="fas fa-building"></i>
+              </div>
+              <div class="sucursal-info">
+                <h4>Espinar - Cusco</h4>
+                <p>
+                  <i class="fas fa-map-marker-alt"></i> Calle Tarapaca s/n
+                  Cercado (A espaldas del mercado central)
+                </p>
+                <p><i class="fas fa-phone"></i> 959391886</p>
+              </div>
+            </div>
+            <div class="sucursal-item">
+              <div class="sucursal-icon">
+                <i class="fa-solid fa-shop"></i>
+              </div>
+              <div class="sucursal-info">
+                <h4>Jose Luis Bustamante y Rivero</h4>
+                <p>
+                  <i class="fas fa-map-marker-alt"></i> Urb. Villa Dolores Av.
+                  Cultura B 13 (Frente a USMP)
+                </p>
+                <p><i class="fas fa-phone"></i> 953251021</p>
+              </div>
+            </div>
+            <div class="sucursal-item">
+              <div class="sucursal-icon">
+                <i class="fa-solid fa-shop"></i>
+              </div>
+              <div class="sucursal-info">
+                <h4>Campamento minero Antapaccay</h4>
+                <p>
+                  <i class="fas fa-map-marker-alt"></i> A 14 km de la provincia
+                  de Espinar
+                </p>
+                <p><i class="fas fa-phone"></i> 963355926</p>
+              </div>
+            </div>
+            <div class="sucursal-item">
+              <div class="sucursal-icon">
+                <i class="fas fa-building"></i>
+              </div>
+              <div class="sucursal-info">
+                <h4>Oficina central - Paucarpata</h4>
+                <p>
+                  <i class="fas fa-map-marker-alt"></i> Av. Colón Nro. 103 B,
+                  Paucarpata, Arequipa
+                </p>
+                <p><i class="fas fa-phone"></i> 948312313</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta de Horarios y Contacto -->
+        <div class="contact-card">
+          <div class="card-header">
+            <i class="fas fa-clock"></i>
+            <h3>Horarios de Atención</h3>
+          </div>
+          <div class="horario-info">
+            <div class="horario-dia">
+              <span class="dia">Lunes a Domingo</span>
+              <span class="hora">8:30 am - 8:30 pm</span>
+            </div>
+            <p class="nota">Atención continua en todas nuestras sucursales</p>
+          </div>
+
+          <div class="contacto-directo">
+            <h4><i class="fas fa-envelope"></i> Cotizaciones y Ventas</h4>
+            <div class="email-box">
+              <i class="fas fa-envelope"></i>
+              <span>distribuidora_gamar@hotmail.com</span>
+            </div>
+            <div class="email-box">
+              <i class="fas fa-envelope"></i>
+              <span>minimarket_gamar@hotmail.com</span>
+            </div>
+          </div>
+
+          <div class="servicio-transporte">
+            <div class="transporte-icon">
+              <i class="fas fa-truck"></i>
+            </div>
+            <div class="transporte-info">
+              <h4>Servicio de Transporte</h4>
+              <p>
+                Disponemos de furgón para entregas de pedidos al por mayor.
+                Contáctanos para coordinar puntos de entrega.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <h3>GAMAR</h3>
+          </div>
+          <p class="footer-slogan">
+            Comprometidos con la excelencia, mejora continua y satisfacción del
+            cliente.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Enlaces rápidos</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#clientes">Clientes</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h4>Síguenos en</h4>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/TIENDASGAMAR" target="_blank"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          <p class="copyright-year">
+            © 2026 Mini Market Gamar. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Botón flotante WhatsApp -->
+    <a
+      href="https://wa.me/51959391886?text=Hola%20Gamar!%20Deseo%20recibir%20información%20sobre%20productos%20y%20servicios."
+      class="whatsapp-float"
+      target="_blank"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+  </body>
+</html>
